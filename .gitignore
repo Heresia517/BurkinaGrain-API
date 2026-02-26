@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.env.pytest_cache
+test.db
+.env
+*.db
+check_project.py
+setup_project.py
+*.db
+check_project.py
+setup_project.py

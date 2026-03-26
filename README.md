@@ -1,10 +1,21 @@
-# 🌾 BurkinaGrain API
+🌾 BurkinaGrain API
 
 > REST API for tracking cereal prices across Burkina Faso's regions.
 
-**Real-world problem:** Cereal prices (millet, sorghum, maize) vary significantly by region and season in Burkina Faso, yet no simple, structured API exists to access this data programmatically.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-blue)](https://burkinagrain-api.onrender.com/docs)
+[![Tests](https://github.com/Heresia517/BurkinaGrain-API/actions/workflows/ci.yml/badge.svg)](https://github.com/Heresia517/BurkinaGrain-API/actions)
 
-This project solves that — a production-ready REST API with authentication, full CRUD, automated tests, and Docker deployment.
+---
+
+## 🇧🇫 Why this project matters
+
+In Burkina Faso, cereal prices (millet, sorghum, maize) vary significantly by region and season. Farmers, traders, and consumers lack a simple, structured way to access this data programmatically. This API fills that gap by providing a production‑ready, open‑source interface to cereal price data.
+
+**Potential impact:**
+- Enable mobile apps for price transparency
+- Help agricultural cooperatives make informed decisions
+- Provide data for researchers and policymakers
 
 ---
 
@@ -17,7 +28,7 @@ This project solves that — a production-ready REST API with authentication, fu
 | Auth | JWT (python-jose + passlib) |
 | Tests | Pytest — 8 tests passing |
 | Deploy | Docker + docker-compose |
-| DB | SQLite (dev) / PostgreSQL-ready |
+| DB | SQLite (dev) / PostgreSQL‑ready |
 
 ---
 
@@ -113,6 +124,8 @@ pytest tests/ -v
 | ALGORITHM | JWT algorithm | HS256 |
 | ACCESS_TOKEN_EXPIRE_MINUTES | Token expiry | 30 |
 
+> **Note:** Generate a secure `SECRET_KEY` with `python -c "import secrets; print(secrets.token_hex(32))"`.
+
 ---
 
 ## Project Structure
@@ -135,7 +148,30 @@ burkina-grain-api/
 
 ---
 
+## Roadmap
+
+- [ ] Add `/regions` endpoint to list available regions
+- [ ] PostgreSQL support in docker-compose
+- [ ] Historical price trends (time‑series data)
+- [ ] Simple frontend demo (HTML/JS) consuming the API
+- [ ] Role‑based access (admin, user)
+
+---
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to report issues, suggest features, and submit pull requests.
+
+---
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
 ## Author
 
-**Hezekiah TOPAN** — Python Back-End Developer  
+**Hezekiah TOPAN** — Python Back‑End Developer  
 [LinkedIn](https://linkedin.com/in/hezekiah-topan) · [GitHub](https://github.com/Heresia517)
+```
